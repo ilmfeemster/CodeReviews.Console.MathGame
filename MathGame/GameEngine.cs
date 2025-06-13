@@ -53,7 +53,7 @@ public class GameEngine
     }
 
     // Methods to generate math problems and check answers
-    private GameResult GenerateAddition()
+    private void GenerateAddition()
     {
         int[] numbers = GenerateRandomNumbers("addition");
         int answer = numbers[0] + numbers[1];
@@ -67,10 +67,9 @@ public class GameEngine
         };
         Console.WriteLine($"{result.GetResultString()} \n");
         gameHistory.Add(result);
-        return result;
     }
 
-    private GameResult GenerateSubtraction()
+    private void GenerateSubtraction()
     {
         int[] numbers = GenerateRandomNumbers("subtraction");
         int answer = numbers[0] - numbers[1];
@@ -84,10 +83,9 @@ public class GameEngine
         };
         Console.WriteLine($"{result.GetResultString()} \n");
         gameHistory.Add(result);
-        return result;
     }
 
-    private GameResult GenerateMultiplication()
+    private void GenerateMultiplication()
     {
         int[] numbers = GenerateRandomNumbers("multiplication");
         int answer = numbers[0] * numbers[1];
@@ -101,10 +99,9 @@ public class GameEngine
         };
         Console.WriteLine($"{result.GetResultString()} \n");
         gameHistory.Add(result);
-        return result;
     }
 
-    private GameResult GenerateDivision()
+    private void GenerateDivision()
     {
         int[] numbers = GenerateRandomNumbers("division");
         int answer = numbers[0] / numbers[1];
@@ -118,7 +115,6 @@ public class GameEngine
         };
         Console.WriteLine($"{result.GetResultString()} \n");
         gameHistory.Add(result);
-        return result;
     }
 
     // Method to generate random numbers based for game problems
